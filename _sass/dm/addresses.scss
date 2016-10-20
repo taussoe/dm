@@ -1,0 +1,61 @@
+@import "./configuration.scss";
+
+.addresses {
+  font-size: 1.3em;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1.4em;
+  }
+
+  &__link-container,
+  &__details-container {
+    @include clearfix();
+  }
+
+  &__link {
+    float: left;
+    color: #FFF;
+    width: 33.3333%;
+    display: block;
+    padding: 1em 0.7em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 400ms ease;
+    font-size: 0.8em;
+    text-align: center;
+
+    &--active {
+      background: #000;
+    }
+
+    @media (min-width: $screen-md-min) {
+      cursor: default;
+      padding: 1em 1.5em;
+      font-size: 1em;
+      text-align: left;
+
+      &--active {
+        background: transparent;
+      }
+    }
+
+  }
+
+  &__details {
+    display: none;
+    background: #000;
+    padding: 1.5em;
+    line-height: 1.7em;
+
+    &--active {
+      display: block;
+    }
+
+    @media (min-width: $screen-md-min) {
+      background: transparent;
+      display: block;
+      float: left;
+      width: 33.3333%;
+    }
+  }
+}

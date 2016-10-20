@@ -1,0 +1,33 @@
+@import "./configuration.scss";
+
+.letter {
+  text-align: center;
+  padding: $gutter-width;
+  font-size:1.5em;
+
+  &__image {
+    transition: transform 400ms ease-in;
+
+    &-link {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+  }
+
+  &__link {
+    font-size: 1em;
+    color: $alternative-link-color;
+  }
+
+  &:hover {
+    .letter {
+      &__image {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

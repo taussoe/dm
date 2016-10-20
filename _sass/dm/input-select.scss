@@ -1,0 +1,79 @@
+@import "./configuration.scss";
+
+.input-select {
+  position: relative;
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #eee;
+
+  &:after {
+    position: absolute;
+    top: 4px;
+    bottom: 0;
+    height: 100%;
+    width: 18%;
+    right: 0;
+    display: block;
+    background-image: url('../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    transform: rotate(0deg);
+    transform-origin: initial;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 18%;
+    display: block;
+    content: '';
+    border-left: 1px solid #eeeeee;
+    transition: background-color 0.15s ease-in-out;
+  }
+
+  &:active,
+  &:focus,
+  &.open {
+    border: 1px solid #eee;
+  }
+
+  &.open {
+
+    &:before {
+      background-color: #eeeeee;
+    }
+
+    &:after{
+      transform: rotate(180deg);
+    }
+  }
+
+  .list {
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #eee;
+    border-top: 0;
+    margin-top: 0;
+    box-shadow: none;
+
+    li {
+      font-size: 1em;
+      transition: background 100ms ease, color 100ms ease;
+
+      &:hover {
+        color: #FFF;
+        background: $alternative-link-color;
+      }
+
+      &.focus {
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}

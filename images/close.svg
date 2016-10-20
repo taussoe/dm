@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Kryds" class="cls-1" d="M1573.49,33.5l4.52-4.514-2-1.99-4.51,4.514L1566.98,27l-1.99,1.99,4.52,4.514-4.52,4.514,1.99,1.991,4.52-4.514,4.51,4.514,2-1.991-4.52-4.514h0Z" transform="translate(-1565 -27)"/>
+</svg>

@@ -4,17 +4,183 @@
   {% include head.html %}
 
   <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-    {% include header.html %}
+    {% include header-frontpage.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <div class="application">
+      <div class="application__header header header--large">
+        <div class="cookie-notification">
+          Vi bruger cookies på dette websted for at sikre den bedst mulige service. <a href="#" class="cookie-notification__read-more">Læs mere</a>
+          <button type="button" aria-hidden="true" class="cookie-notification__close">LUK</button>
+        </div>
+
+        <div class="util__container header__wrapper">
+
+          <div class="header__logo-container">
+            <a href="index.html" class="header__logo logo">
+              <img src="images/logo.png" class="logo__image" alt="Hjemmeside for Danders & More" />
+            </a>
+
+            <button class="header__mobile-toggler" id="mobileNavigationToggler">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+
+          <div class="header__navigation-container">
+            <div data-navigation class="header__navigation main-navigation">
+              <div class="main-navigation__link-wrapper" data-navigation-target="#about-us">
+                <a href="about-us.html" class="main-navigation__link main-navigation__link--contains-children"><span>Om os</span></a>
+                <span class="main-navigation__link-toggler"></span>
+                <div id="about-us" class="main-navigation__sub-navigation-container">
+                  <div class="main-navigation__sub-navigation">
+                    <div class="main-navigation__link-group">
+                      <a href="#" class="main-navigation__link main-navigation__link--header"><span>Transaktion</span></a>
+                      <a href="#" class="main-navigation__link"><span>M&A</span></a>
+                      <a href="transaktioner.html" class="main-navigation__link"><span>Finansielle transaktioner</span></a>
+                    </div>
+
+                    <div class="main-navigation__link-group">
+                      <a href="#" class="main-navigation__link main-navigation__link--header"><span>Fast ejendom og enterprise</span></a>
+                      <a href="#" class="main-navigation__link"><span>Selskabsret</span></a>
+                      <a href="#" class="main-navigation__link"><span>Kontrakter</span></a>
+                      <a href="#" class="main-navigation__link"><span>Ansættelsesret</span></a>
+                    </div>
+
+                    <div class="main-navigation__link-group">
+                      <a href="#" class="main-navigation__link main-navigation__link--header"><span>Corporate & commercial</span></a>
+                      <a href="#" class="main-navigation__link"><span>Fast ejendom</span></a>
+                      <a href="#" class="main-navigation__link"><span>Entreprise og udbud</span></a>
+                    </div>
+
+                    <div class="main-navigation__link-group">
+                      <a href="#" class="main-navigation__link main-navigation__link--header"><span>Tvister</span></a>
+                      <a href="#" class="main-navigation__link"><span>Retssagsbehandling</span></a>
+                      <a href="#" class="main-navigation__link"><span>Voldgift</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-navigation__link-wrapper" data-navigation-target="#counseling">
+                <a href="counseling.html" class="main-navigation__link main-navigation__link--contains-children"><span>Vores rådgivning</span></a>
+                <span class="main-navigation__link-toggler"></span>
+                <div id="counseling" class="main-navigation__sub-navigation-container">
+                  <div class="main-navigation__sub-navigation">
+                    <div class="main-navigation__link-group">
+                      <a href="#" class="main-navigation__link main-navigation__link--header"><span>Transaktion</span></a>
+                      <a href="#" class="main-navigation__link"><span>M&A</span></a>
+                      <a href="transaktioner-counseling.html" class="main-navigation__link"><span>Finansielle transaktioner</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-navigation__link-wrapper">
+                <a href="internationalt.html" class="main-navigation__link main-navigation__link--contains-children"><span>Internationalt</span></a>
+              </div>
+              <div class="main-navigation__link-wrapper">
+                <a href="karriere.html" class="main-navigation__link main-navigation__link--contains-children"><span>Karriere</span></a>
+              </div>
+              <div class="main-navigation__link-wrapper">
+                <a href="personer.html" class="main-navigation__link main-navigation__link--contains-children"><span>Personer</span></a>
+              </div>
+              <div class="navigation-contact">
+                <div class="main-navigation__link-wrapper">
+                  <a href="kontakt.html" class="main-navigation__link navigation-contact__contact-link"><span>Kontakt</span></a>
+                </div>
+                <div class="main-navigation__link-wrapper">
+                  <div class="navigation-contact__language-selector">
+                    <a href="#change-language" class="main-navigation__link navigation-contact__language-link"><span>DA</span></a>
+
+                    <ul class="navigation-contact__languages">
+                      <li><a href="#" class="navigation-contact__languages-link navigation-contact__languages-link--active">DA</a></li>
+                      <li><a href="#" class="navigation-contact__languages-link">EN</a></li>
+                      <li><a href="#" class="navigation-contact__languages-link">SV</a></li>
+                      <li><a href="#" class="navigation-contact__languages-link">DE</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="application__content">
+        <div class="hero-container carousel slide" id="hero-slider">
+          <div class="carousel-inner hero__content-wrapper" role="listbox">
+            <div class="item active hero">
+              <div class="hero__content-container">
+                <p class="hero__content">
+                  “Vi finder nye vinkler i velkendte områder”
+                </p>
+              </div>
+            </div>
+            <div class="item hero">
+              <div class="hero__content-container">
+                <p class="hero__content">
+                  “Danders & More - det sikre valg”
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <ol class="carousel-indicators hero__indicators">
+            <li data-target="#hero-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#hero-slider" data-slide-to="1"></li>
+          </ol>
+
+          <a aria-label="Gå til forrige slide" class="hero__previous" data-slide="prev" href="#hero-slider"></a>
+          <a aria-label="Gå til næste slide" class="hero__next" data-slide="next" href="#hero-slider"></a>
+        </div>
+
+        <div class="content-box content-box--space util__container">
+          <div class="row">
+            <div class="col-md-4">
+              <section class="letter">
+                <a class="letter__image-link" href="#"><img class="letter__image" src="images/letter-c.png" /></a>
+                <h1 class="letter__title">Copenhagen</h1>
+                <a class="letter__link" href="#">Se mere</a>
+              </section>
+            </div>
+            <div class="col-md-4">
+              <section class="letter">
+                <a class="letter__image-link" href="#"><img class="letter__image" src="images/letter-l.png" /></a>
+                <h1 class="letter__title">London</h1>
+                <a class="letter__link" href="#">Se mere</a>
+              </section>
+            </div>
+            <div class="col-md-4">
+              <section class="letter">
+                <a class="letter__image-link" href="#"><img class="letter__image" src="images/letter-z.png" /></a>
+                <h1 class="letter__title">Zug</h1>
+                <a class="letter__link" href="#">Se mere</a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="application__copyright">
+        &copy; 2016 DANDERS & MORE - All rights reserved
       </div>
     </div>
-
-    {% include footer.html %}
-
+    
+    <script src="/js/jquery/dist/jquery.js"></script>
+    <script src="/js/jquery-nice-select/js/jquery.nice-select.js"></script>
+    <script src="/js/typeahead.js/dist/typeahead.bundle.js"></script>
+    
+    <script src="/js/bootstrap/transition.js"></script>
+    <script src="/js/bootstrap/carousel.js"></script>
+    
+    <script src="/js/main.js"></script>
+    
   </body>
 
 </html>

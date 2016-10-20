@@ -1,0 +1,196 @@
+@import "./configuration.scss";
+
+.main-navigation {
+  background-color: #625f5c;
+
+  font-size: 1.5em;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 1.1em;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    font-size: 1.5em;
+  }
+
+  vertical-align: bottom;
+
+  position: absolute;
+  right: -110%;
+  transition: right 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transform: translateZ(0);
+  top: 0;
+  width: 100%;
+
+  &--open {
+    right: 0;
+  }
+
+  @media (min-width: $screen-md-min) {
+    display: inline-block;
+    background-color: transparent;
+    position: static;
+  }
+
+  & > &__link:first-child {
+    border-top: 0;
+  }
+
+   &__link-wrapper > &__link {
+    text-transform: uppercase;
+
+    @media (min-width: $screen-md-min) {
+      margin-top: 1.5em;
+      padding-bottom: 31px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      margin-top: 0.6em;
+    }
+  }
+
+  &__link {
+    color: #FFF;
+    display: block;
+    padding: 1em;
+    border-top: 1px solid #706e6d;
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: color 400ms ease-in-out;
+    transform: translateZ(0);
+
+    &-toggler {
+      position: absolute;
+      display: block;
+      width: 8px;
+      height: 6px;
+      right: 0;
+      top: 0;
+      background-image: url(../images/small-arrow.svg);
+      padding: 1.75em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transform: rotate(-180deg);
+      transition: transform 200ms linear;
+      cursor: pointer;
+
+      @media (min-width: $screen-md-min) {
+        display: none;
+      }
+    }
+
+    &-wrapper {
+      display: block;
+      position: relative;
+
+      @media (min-width: $screen-md-min){
+        display: inline-block;
+      }
+    }
+
+    span {
+      display: inline-block;
+
+      @media (min-width: $screen-md-min) {
+        padding-bottom: 8px;
+      }
+    }
+
+    &--active {
+      span {
+        color: $alternative-link-color;
+        line-height: 1.5em;
+        font-weight: bold;
+        padding-bottom: 5px;
+
+        @media (min-width: $screen-md-min) {
+          border-bottom: 3px solid currentColor;
+        }
+      }
+
+      &.main-navigation__link--contains-children:after {
+        background-position: 0 -6px;
+      }
+    }
+
+    @media (min-width: $screen-md-min) {
+      display: inline-block;
+      border-top: 0;
+
+      &--header {
+        font-size: 1.3em;
+
+        span {
+          display: inline-block;
+          border-bottom: 1px solid #81807f;
+        }
+      }
+    }
+  }
+
+  &__sub-navigation-container {
+    overflow: hidden;
+
+    @media (min-width: $screen-md-min) {
+      width: 50em;
+      z-index: 999;
+      left: auto;
+      position: absolute;
+      background: #625f5c;
+      right: auto;
+      margin-top: 7px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      margin-top: 3px;
+    }
+  }
+
+  &__sub-navigation {
+    @include clearfix();
+    margin-left: 2.5em;
+    transition: margin-top 400ms ease;
+    transform: translateZ(0);
+    margin-top: -100vh;
+    text-align: left;
+    max-height: 100%;
+    overflow: hidden;
+
+    &--open {
+      margin-top: 0;
+
+      .main-navigation__link-toggler {
+        transform: rotate(0deg);
+      }
+    }
+
+    @media (min-width: $screen-md-min) {
+      margin-left: 0;
+      padding: .5em 1em 2.5em;
+    }
+
+    & .main-navigation__link {
+      padding-left: 0;
+      padding-right: 0;
+      display: block;
+      padding: .5em;
+
+      span {
+        padding-bottom: 0;
+      }
+
+      @media (min-width: $screen-md-min) {
+        &-group {
+          float: left;
+          width: 50%;
+        }
+
+        &:hover {
+          color: $alternative-link-color
+        }
+      }
+    }
+  }
+}

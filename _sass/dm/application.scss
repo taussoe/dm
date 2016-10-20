@@ -1,0 +1,19 @@
+@import "./configuration.scss";
+
+.application {
+  overflow: hidden;
+
+  &__footer {
+    background: #2e2a25;
+    color: #FFF;
+    padding: $gutter-width
+  }
+
+  &__copyright {
+    background: #25221e;
+    color: #c5c4c3;
+    padding: $gutter-width/2;
+    text-align: center;
+    font-size: 1.3em;
+  }
+}

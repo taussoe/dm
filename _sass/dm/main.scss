@@ -1,0 +1,116 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "../bootstrap-sass/_variables.scss";
+@import "../bootstrap-sass/_mixins.scss";
+@import "../bootstrap-sass/_grid.scss";
+@import "../bootstrap-sass/_carousel.scss";
+// endbower
+
+@import "./application.scss";
+@import "./main-navigation.scss";
+@import "./logo.scss";
+@import "./content-box.scss";
+@import "./footer.scss";
+@import "./addresses.scss";
+@import "./legal-navigation.scss";
+@import "./social-group.scss";
+@import "./utils.scss";
+@import "./question.scss";
+@import "./header.scss";
+@import "./hero.scss";
+@import "./letter.scss";
+@import "./cookie-notification.scss";
+@import "./person-card.scss";
+@import "./form-item.scss";
+@import "./cover.scss";
+@import "./input-select.scss";
+@import "./input-search.scss";
+@import "./card.scss";
+@import "./publications.scss";
+@import "./navigation-contact.scss";
+
+* {
+  box-sizing: border-box;
+  // outline: 1px solid red;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
+  font-weight: 300;
+  margin: 0;
+  padding: 0.1em 0;
+  color: #2e2a25
+}
+
+h2,
+h3 {
+  font-size: 1.55em;
+  font-weight: 600;
+  margin: 0;
+  padding: .2em 0;
+}
+
+.subheadline,
+.subsubheadline{
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: 3em;
+  margin-bottom: .7em;
+  padding-bottom: .3em;
+}
+
+.subheadline {
+  border-bottom: 1px solid #eaeaea;
+
+  &--spaced {
+    margin-bottom: 1em;
+  }
+}
+
+p {
+  font-size: 1.6em;
+  line-height: 1.8em;
+  margin: 0;
+  padding: .5em 0;
+
+  a {
+    color: $alternative-link-color;
+    font-weight: bold;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.carousel-inner > .item {
+  transition: transform 1.5s ease;
+}

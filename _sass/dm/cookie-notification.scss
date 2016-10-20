@@ -1,0 +1,53 @@
+@import "./configuration.scss";
+
+.cookie-notification {
+  font-size: 1.2em;
+  background: #f0f0f0;
+  text-align: center;
+  padding: 1.2em 10%;
+  color: #2e2925;
+  position: relative;
+
+  @media (min-width: $screen-md-min){
+    padding: 0.7em 0;
+    font-size: 1.2em;
+    position: static;
+  }
+
+  &__read-more {
+    font-weight: bold;
+    color: $alternative-link-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__close {
+    width: 9px;
+    height: 9px;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url('../images/close-cross.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -999px;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1em;
+    padding: 10px;
+    margin-bottom: 0.1em;
+
+    position: absolute;
+    right: 5%;
+    top: 1em;
+
+    @media (min-width: $screen-md-min) {
+      position: static;
+    }
+  }
+}

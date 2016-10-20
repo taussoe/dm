@@ -1,0 +1,47 @@
+@import "./configuration.scss";
+
+.util{
+  &__container {
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: $screen-sm-min) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      width: 970px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      width: 1200px;
+    }
+
+    &--spaced {
+      margin-left: 3em;
+      margin-right: 3em;
+    }
+
+    &--aligned {
+      display: flex;
+      align-items: center;
+
+      flex-direction: column;
+
+      @media (min-width: $screen-sm-min) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__m {
+    &-t {
+      margin-top: $gutter-width;
+    }
+  }
+
+  &__columns {
+    columns: 200px 2;
+  }
+}

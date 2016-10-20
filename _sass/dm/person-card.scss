@@ -1,0 +1,149 @@
+@import "./configuration.scss";
+
+.person-card {
+  font-size: 1.4em;
+  line-height: 1.5em;
+
+  &--horizontal {
+    .person-card {
+      &__content {
+        overflow: hidden;
+      }
+
+      &__portrait {
+        width: 40%;
+        max-height: none;
+        margin-right: 1.5em;
+
+        @media (min-width: $screen-sm-min) {
+          float: left;
+        }
+      }
+
+      &__name {
+        margin-top: 0;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      &__section {
+        &-title {
+          margin: 0;
+
+          &-key {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--detailing {
+    .person-card {
+      &__content {
+        overflow: hidden;
+      }
+
+      &__portrait {
+        width: 100%;
+        max-height: none;
+        margin-bottom: 1.5em;
+
+        @media (min-width: $screen-sm-min) {
+          width: 40%;
+          float: left;
+          margin-right: $gutter-width;
+          margin-bottom: 0;
+        }
+      }
+
+      &__name {
+        margin-top: 0;
+        font-size: 1.75em;
+        margin-bottom: 1em;
+        font-family: 'Playfair Display', serif;
+      }
+
+      &__section {
+        &-title-key {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__portrait {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  &__name {
+    font-size: 1.2em;
+    padding: 0;
+    margin-top: .5em;
+  }
+
+  &__section-list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+
+  li.person-card__section-list-item {
+    font-size: 1em;
+    font-weight: 300;
+    padding-left: 0;
+  }
+
+  &__section {
+    margin: $gutter-width/2 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-vcard {
+    &:before {
+      content: '';
+      background-image: url('../images/vcard.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 19px;
+      height: 19px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: .7em;
+    }
+
+    &__link {
+      font-weight: bold;
+      color: $alternative-link-color;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &-linkedin {
+    &:before {
+      content: '';
+      background-image: url('../images/linkedin.svg');
+      background-color: #4b4b4b;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 19px;
+      height: 19px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: .7em;
+    }
+
+    &__link {
+      font-weight: bold;
+      color: $alternative-link-color;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}

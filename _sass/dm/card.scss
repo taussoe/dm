@@ -1,0 +1,13 @@
+.card {
+  &__image {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  &__headline {
+    margin-top: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.6em;
+  }
+}

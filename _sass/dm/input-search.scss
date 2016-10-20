@@ -1,0 +1,94 @@
+@import "./configuration.scss";
+
+.input-search {
+  position: relative;
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #eee;
+  background: #FFF;
+  line-height: 1;
+
+  .input-search__input {
+    width: 100%;
+    padding-right: 18%;
+    border: none;
+    padding-left: 18px;
+    height: 42px;
+    font-weight: normal;
+    outline: none;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 18%;
+    content: ' ';
+    display: block;
+    background-image: url('../images/search-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-left: 1px solid #eeeeee;
+  }
+
+  .twitter-typeahead {
+    width: 100%;
+  }
+
+  .tt-menu {
+    width: 100%;
+    background:#FFF;
+    border-radius: 0;
+    border: 1px solid #eee;
+    border-top: 0;
+    margin-top: 0;
+    box-shadow: none;
+    transform: scale(0.75) translateY(-21px);
+    transform-origin: 50% 0;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    display: block !important;
+    opacity: 0;
+
+    &.tt-open {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    &.tt-empty {
+      opacity: 0;
+      transform: scale(0.75) translateY(-21px);
+
+      .tt-dataset {
+        min-height: 40px;
+      }
+    }
+
+    .tt-suggestion {
+      padding-left: 18px;
+      padding-right: 29px;
+      font-size: 14px;
+      min-height: 40px;
+      vertical-align: middle;
+      display: inline-block;
+      width: 100%;
+      line-height: 40px;
+      transition: background 100ms ease, color 100ms ease;
+
+      &:hover,
+      &.tt-cursor {
+        color: #FFF;
+        background: $alternative-link-color;
+        cursor: pointer;
+      }
+
+      &.focus {
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}

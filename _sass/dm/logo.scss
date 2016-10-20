@@ -1,0 +1,27 @@
+@import "./configuration.scss";
+
+.logo {
+  display: block;
+  padding: 2.9em 1.5em 2.5em;
+
+  @media (min-width: $screen-sm-min) {
+    display: block;
+    text-align: center;
+    padding: 2.5em 1.5em;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    display: inline-block;
+  }
+
+  &__image {
+  }
+
+  &__text {
+    color: #FFF;
+    font-size: 1em;
+    display: block;
+    margin-top: 2px;
+    text-transform: uppercase;
+  }
+}

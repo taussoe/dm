@@ -1,0 +1,169 @@
+@import "./configuration.scss";
+
+.content-box {
+  @include clearfix();
+
+  &--fluid {
+    .content-box {
+      &__content {
+        max-width: none;
+      }
+    }
+  }
+
+  &__content {
+    padding: $gutter-width;
+    flex: 1;
+
+    @media (min-width: $screen-sm-min) {
+      display: block;
+      float: left;
+      max-width: 50%;
+      padding: $gutter-width 0 $gutter-width;
+      margin: 4.2em 0;
+    }
+
+    &--no-floating {
+      float: none;
+    }
+
+    &--pad-right {
+      padding-right: $gutter-width*1.5;
+    }
+
+    &--pad-left {
+      padding-left: $gutter-width*1.5;
+    }
+
+    &--full {
+      width: 100%;
+      max-width: none;
+    }
+
+    &--fluid {
+      width: auto;
+      max-width: none;
+    }
+
+    &--columns {
+    }
+
+    h1 {
+      padding-top: 0;
+    }
+  }
+
+
+  &__image {
+    width: 100%;
+    max-width: 100%;
+
+    &-container {
+      width: 100%;
+
+      @media (min-width: $screen-sm-min) {
+        max-width: 50%;
+        float: left;
+        display: block;
+        margin: $gutter-width*2.8 0;
+        padding-right: 15px;;
+
+        &--right {
+          padding-left: 15px;
+          padding-right: 0;
+          float: right;
+        }
+      }
+
+      &--strict {
+        max-width: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  &--blue {
+    background-image: url('../images/bluebox.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-plain {
+      background: #eef6f8;
+    }
+
+    @media (min-width: $screen-md-min) {
+      background-image: url('../images/bluebox-large.png');
+    }
+  }
+
+  &--yellow {
+    &-plain {
+      background: #fefaf1;
+    }
+  }
+
+  &__section {
+    @include clearfix();
+
+    &--headline {
+      margin: 3em;
+
+      @media (min-width: $screen-md-min) {
+        margin: $gutter-width*2.8 0 0;
+      }
+    }
+  }
+
+
+  &--blue-alternative {
+    background-image: url('../images/bluebox-alt.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--grey {
+    // This modifer is used for citater, but it is just plain white
+    // background: #e7e7e7;
+  }
+
+  &--jumbotron {
+    text-align: center;
+    padding: 13em 0;
+  }
+
+  &--space {
+    padding: $gutter-width*2;
+  }
+
+  &--no-top {
+    .content-box {
+      &__content {
+        margin-top: 0;
+      }
+    }
+  }
+
+  ul li {
+    font-weight: bold;
+    padding-left: 2em;
+    font-size: 1.5em;
+    line-height: 1.7em;
+    vertical-align: middle;
+  }
+
+  blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 1.3em;
+    font-family: times;
+    margin-left: 0;
+
+    footer {
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-size: 0.6em;
+    }
+  }
+}

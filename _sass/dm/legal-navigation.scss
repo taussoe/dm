@@ -1,0 +1,16 @@
+@import "./configuration.scss";
+
+.legal-navigation {
+  font-size: 1.3em;
+
+  &__link {
+    line-height: 2em;
+    display: block;
+    color: #e3e3e2;
+    transition: color 200ms ease-in-out;
+
+    &:hover {
+      color: $alternative-link-color;
+    }
+  }
+}

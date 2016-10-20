@@ -1,0 +1,38 @@
+@import "./configuration.scss";
+
+.publications {
+  font-size: 1.5em;
+
+  &__item {
+    &-title {
+      display: block;
+    }
+
+    &-text {
+      font-size: 1em;
+      display: block;
+    }
+
+    &-download {
+      &:before {
+        content: '';
+        background-image: url('../images/pdf.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 19px;
+        height: 19px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: .7em;
+      }
+
+      &__link {
+        font-weight: bold;
+        color: $alternative-link-color;
+      }
+    }
+
+  }
+
+
+}

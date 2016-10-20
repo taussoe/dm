@@ -1,0 +1,41 @@
+@import "./configuration.scss";
+
+.social-group {
+  &__linkedin,
+  &__facebook,
+  &__instagram {
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+
+    width: 29px;
+    height: 28px;
+    background-color: #003a5c;
+    background-image: url('../images/socials.svg');
+    background-repeat: no-repeat;
+    transition: background-color 200ms ease-in-out;
+
+    margin-left: .4em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      background-color: #005a8c;
+    }
+  }
+
+  &__linkedin {
+    background-position: 7px center;
+  }
+
+  &__facebook {
+    background-position: -39px center;
+  }
+
+  &__instagram {
+    background-position: -94px center;
+  }
+}

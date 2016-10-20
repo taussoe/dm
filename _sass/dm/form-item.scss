@@ -1,0 +1,15 @@
+@import "./configuration.scss";
+
+.form-item {
+  font-size: 1.3em;
+
+  &__title {
+    display: block;
+    margin-bottom: $gutter-width/4;
+  }
+
+  &__input {
+    border: 1px solid #eeeeee;
+    background-color: #FFF;
+  }
+}
